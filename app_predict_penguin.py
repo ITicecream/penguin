@@ -46,24 +46,24 @@ with tab2:
 
 
   x = evaluations.columns
-      fig = px.Figure(data=[
-          px.Bar(name = 'Decision Tree',
-                x = x,
-                y = evaluations.loc['Decision Tress']),
-          px.Bar(name = 'Random Forest',
-                x = x,
-                y =  evaluations.loc['Random Forest']),
-          px.Bar(name = 'KNN',
-                x = x,
-                y =  evaluations.loc['KNN']),
-          px.Bar(name = 'AdaBoost',
-                x = x,
-                y =  evaluations.loc['AdaBoost']),
-          px.Bar(name = 'XGBoost',
-                x = x,
-                y =  evaluations.loc['XGBoost'])
-      ])
-      st.plotly_chart(fig, use_container_width=True)
+  fig = px.Figure(data=[
+        px.Bar(name = 'Decision Tree',
+               x = x,
+               y = evaluations.loc['Decision Tress']),
+        px.Bar(name = 'Random Forest',
+               x = x,
+               y =  evaluations.loc['Random Forest']),
+        px.Bar(name = 'KNN',
+               x = x,
+               y =  evaluations.loc['KNN']),
+        px.Bar(name = 'AdaBoost',
+               x = x,
+               y =  evaluations.loc['AdaBoost']),
+        px.Bar(name = 'XGBoost',
+               x = x,
+               y =  evaluations.loc['XGBoost'])
+    ])
+  st.plotly_chart(fig, use_container_width=True)
 
-      st.dataframe(evaluations)
+  st.dataframe(evaluations)
 
